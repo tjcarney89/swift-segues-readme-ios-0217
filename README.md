@@ -42,6 +42,7 @@
 * I think it's important for the student to visualize what the segue is, what it's doing, and how we can pass information forward to another `UIViewController`. In the immersive course here, this particular topic trips up a lot of people. We need to be very clear, concise, explicit and treat it as if we're explaining it to a five year old.
 * I think my slide above that breaks down the prepareForSegue method is good to show them, as it outlines in a visual format what the hell is going on. But this will need to be backed by a thorough explanation.
 * Include an xcode project that has a list of food emoji's where when one is tapped, it will segue over to another `UIViewController` which displays the selected emoji much larger in the center of the screen.
+* In that we're actually using a `UINavigationController` for more than just displaying a pretty title at the top, we need to go into how a `UINavigationController` manages its stack in an array, and how we can push and pop viewControllers off of this stack navigating back and forth moving information forward through these `UIStoryboardSegue` objects.
 
 
 <a href='https://learn.co/lessons/segueStuff' data-visibility='hidden'>View this lesson on Learn.co</a>
