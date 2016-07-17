@@ -13,6 +13,7 @@
 		B776A8351D3B1A6D005AC0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B776A8341D3B1A6D005AC0A4 /* Assets.xcassets */; };
 		B776A8381D3B1A6D005AC0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B776A8361D3B1A6D005AC0A4 /* LaunchScreen.storyboard */; };
 		B776A8401D3B1AF3005AC0A4 /* learn_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = B776A83F1D3B1AF3005AC0A4 /* learn_ios.png */; };
+		B776A8421D3B1CF5005AC0A4 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776A8411D3B1CF5005AC0A4 /* FruitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B776A8371D3B1A6D005AC0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B776A8391D3B1A6D005AC0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B776A83F1D3B1AF3005AC0A4 /* learn_ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn_ios.png; sourceTree = "<group>"; };
+		B776A8411D3B1CF5005AC0A4 /* FruitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				B776A82D1D3B1A6D005AC0A4 /* AppDelegate.swift */,
 				B776A82F1D3B1A6D005AC0A4 /* FruitListingViewController.swift */,
+				B776A8411D3B1CF5005AC0A4 /* FruitViewController.swift */,
 				B776A8311D3B1A6D005AC0A4 /* Main.storyboard */,
 				B776A8341D3B1A6D005AC0A4 /* Assets.xcassets */,
 				B776A8361D3B1A6D005AC0A4 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				B776A8301D3B1A6D005AC0A4 /* FruitListingViewController.swift in Sources */,
 				B776A82E1D3B1A6D005AC0A4 /* AppDelegate.swift in Sources */,
+				B776A8421D3B1CF5005AC0A4 /* FruitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
