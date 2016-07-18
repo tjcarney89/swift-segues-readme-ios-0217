@@ -6,7 +6,10 @@
 
 ## Learning Objectives
 
-* Fill this out when lesson is written.
+* Understand the concepts of scenes within a storyboard
+* Understand that scenes represent individual view controllers
+* Understand how segues are used to transition between scenes
+* Pass data from one view controller to another
 
 ## Segways and Segues
 
