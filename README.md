@@ -101,11 +101,13 @@ That's where the segue magic happens.
 
 This method is called whenever your iOS app is transitioning from the main view (backed by `FruitListingViewController`) to another view. In other words, every time you tap an item in the fruit listing in the main view, this method is called. It gets passed a `UIStoryboardSegue` object, which represents the segue (the orange lines in the diagram shown earlier in this lesson). That `segue` object contains some important data that faciliates the transition from one view to another.
 
-`prepareForSegue(_:sender:)` first checks to see if you're dealing with the segue from the main view to the fruits detail view. If you're not, the method does nothing and returns immediately. (You should always be dealing with that segue, since it's the only one you've set up, but it's good to get into the habit to check anyway.)
+Our implementation of `prepareForSegue(_:sender:)` first checks to see if you're dealing with the segue from the main view to the fruits detail view. If you're not, the method does nothing and returns immediately. (You should always be dealing with that segue, since it's the only one you've set up, but it's good to get into the habit to check anyway.)
 
 The next two lines are important. It is an if statement that unwraps two important pieces of data from the segue. The first line unwraps the _destination view controller_ and casts it to a `FruitViewController`:
 
+```swift
 let dest = segue.destinationViewController as? FruitViewController
+```
 
 Let's break this line down. A `UIStoryboardSegue` object contains a `destinationViewController`, which is the view controller _class_ that will be presented to the user. In this case, it should be a `FruitViewController`. The `destinationViewController` is set when the segue is defined.
 
