@@ -4,11 +4,14 @@
 
 > If it's a good idea, go ahead and do it. It's much easier to apologize than it is to get permission. ~[Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper)
 
+## Overview 
+
+In this lesson, we'll cover segues and how they allow the user to move between views in an application. 
+
 ## Learning Objectives
 
-* Understand the concepts of scenes within a storyboard
-* Understand that scenes represent individual view controllers
-* Understand how segues are used to transition between scenes
+* Explain how scenes represent individual view controllers
+* Use segues to transition between scenes
 * Pass data from one view controller to another
 
 ## Segways and Segues
