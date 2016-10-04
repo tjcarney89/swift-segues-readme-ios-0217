@@ -14,7 +14,7 @@ class FruitViewController: UIViewController {
 
     var fruit: String?
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let fruit = fruit {
             fruitEmojiLabel?.text = fruit
@@ -25,7 +25,7 @@ class FruitViewController: UIViewController {
         }
     }
 
-    private func emojiToName(emoji: String) -> String {
+    fileprivate func emojiToName(_ emoji: String) -> String {
         switch emoji {
         case "🍎":
             return "Apple"

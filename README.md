@@ -91,20 +91,20 @@ This icon represents a _segue_. You can click on it and view its attributes in I
 You know that there's a segue between the `FruitListingViewController` (represented as **Fruits Scene** in the storyboard) and `FruitViewController` (represented as **Fruit View Controller Scene** in the storyboard). Open up `FruitListingViewController.swift` in Xcode's editor. If you scroll to the bottom of the file, you'll find a method called `prepareForSegue(_:sender:)` that looks like this:
 
 ```swift
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier != "ShowFruitDetails" { return }
-    if let dest = segue.destinationViewController as? FruitViewController,
-           indexPath = tableView.indexPathForSelectedRow {
-        dest.fruit = fruits[indexPath.row]
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "ShowFruitDetails" { return }
+        if let dest = segue.destination as? FruitViewController,
+               let indexPath = tableView.indexPathForSelectedRow {
+            dest.fruit = fruits[(indexPath as NSIndexPath).row]
+        }
     }
-}
 ```
 
 That's where the segue magic happens.
 
 This method is called whenever your iOS app is transitioning from the main view (backed by `FruitListingViewController`) to another view. In other words, every time you tap an item in the fruit listing in the main view, this method is called. It gets passed a `UIStoryboardSegue` object, which represents the segue (the orange lines in the diagram shown earlier in this lesson). That `segue` object contains some important data that faciliates the transition from one view to another.
 
-Our implementation of `prepareForSegue(_:sender:)` first checks to see if you're dealing with the segue from the main view to the fruits detail view. If you're not, the method does nothing and returns immediately. (You should always be dealing with that segue, since it's the only one you've set up, but it's good to get into the habit to check anyway.)
+Our implementation of `prepare(for:sender:)` first checks to see if you're dealing with the segue from the main view to the fruits detail view. If you're not, the method does nothing and returns immediately. (You should always be dealing with that segue, since it's the only one you've set up, but it's good to get into the habit to check anyway.)
 
 The next two lines are important. It is an if statement that unwraps two important pieces of data from the segue. The first line unwraps the _destination view controller_ and casts it to a `FruitViewController`:
 
@@ -139,7 +139,7 @@ class FruitViewController: UIViewController {
 
     var fruit: String?
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let fruit = fruit {
             fruitEmojiLabel?.text = fruit
@@ -150,7 +150,7 @@ class FruitViewController: UIViewController {
         }
     }
 
-    private func emojiToName(emoji: String) -> String {
+    fileprivate func emojiToName(_ emoji: String) -> String {
         switch emoji {
         case "🍎":
             return "Apple"
